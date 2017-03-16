@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GADB.AFitness" BaseTypeListCollapsed="true">
+    <Position X="3.75" Y="4.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Generic\AFitness.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Right" Position="0.1" Collapsed="true" />
+  </Class>
+  <Class Name="GADB.Aid">
+    <Position X="0.5" Y="4" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAACAAAAACAAAAAAAAAAAAQAAAAAAIAAAAAADA=</HashCode>
+      <FileName>Generic\Aid.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GADB.ControllerBase" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>RAEaAEAFGgAAEMCAABBgQYEAYAAgAAAAIBAAEAQAghA=</HashCode>
+      <FileName>Generic\ControllerBase.Control.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Bottom" Position="0.332" />
+  </Class>
+  <Class Name="GADB.FuncChromo">
+    <Position X="0.5" Y="1.25" Width="2.75" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAAgAAAIAAAAAAAAAAAgAAABA=</HashCode>
+      <FileName>Func\FuncChromosome.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GADB.FuncControl">
+    <Position X="3.75" Y="0.5" Width="2.75" />
+    <NestedTypes>
+      <Delegate Name="GADB.FuncControl.y" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>NAA\NAAControl.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQIAAAAAAAAAACAAAAAAAAAQgAAEAAAAQAAAACAgAA=</HashCode>
+      <FileName>Func\FuncControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="10" />
+</ClassDiagram>
