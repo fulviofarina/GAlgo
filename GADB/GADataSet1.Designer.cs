@@ -911,7 +911,7 @@ namespace GADB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public DataRow AddDataRow(ProblemsRow parentProblemsRowByProblems_KnapData, double A, double B, double C, double D, double E, double F, double G, double H, double I, double J, int K, int L, int M) {
+            public DataRow AddDataRow(ProblemsRow parentProblemsRowByProblems_KnapData, double A, double B, double C, double D, double E, double F, double G, double H, double I, double J, double K, double L, double M) {
                 DataRow rowDataRow = ((DataRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -1005,11 +1005,11 @@ namespace GADB {
                 base.Columns.Add(this.columnI);
                 this.columnJ = new global::System.Data.DataColumn("J", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnJ);
-                this.columnK = new global::System.Data.DataColumn("K", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnK = new global::System.Data.DataColumn("K", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnK);
-                this.columnL = new global::System.Data.DataColumn("L", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnL = new global::System.Data.DataColumn("L", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnL);
-                this.columnM = new global::System.Data.DataColumn("M", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnM = new global::System.Data.DataColumn("M", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnM);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
@@ -2869,12 +2869,6 @@ namespace GADB {
             
             private global::System.Data.DataColumn columnMaxJ;
             
-            private global::System.Data.DataColumn columnMaxK;
-            
-            private global::System.Data.DataColumn columnMaxL;
-            
-            private global::System.Data.DataColumn columnMaxM;
-            
             private global::System.Data.DataColumn columnMinD;
             
             private global::System.Data.DataColumn columnMinE;
@@ -2888,12 +2882,6 @@ namespace GADB {
             private global::System.Data.DataColumn columnMinI;
             
             private global::System.Data.DataColumn columnMinJ;
-            
-            private global::System.Data.DataColumn columnMinK;
-            
-            private global::System.Data.DataColumn columnMinL;
-            
-            private global::System.Data.DataColumn columnMinM;
             
             private global::System.Data.DataColumn columnDFine;
             
@@ -2914,6 +2902,18 @@ namespace GADB {
             private global::System.Data.DataColumn columnLFine;
             
             private global::System.Data.DataColumn columnMFine;
+            
+            private global::System.Data.DataColumn columnMaxK;
+            
+            private global::System.Data.DataColumn columnMaxL;
+            
+            private global::System.Data.DataColumn columnMaxM;
+            
+            private global::System.Data.DataColumn columnMinK;
+            
+            private global::System.Data.DataColumn columnMinL;
+            
+            private global::System.Data.DataColumn columnMinM;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -3094,30 +3094,6 @@ namespace GADB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MaxKColumn {
-                get {
-                    return this.columnMaxK;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MaxLColumn {
-                get {
-                    return this.columnMaxL;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MaxMColumn {
-                get {
-                    return this.columnMaxM;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn MinDColumn {
                 get {
                     return this.columnMinD;
@@ -3169,30 +3145,6 @@ namespace GADB {
             public global::System.Data.DataColumn MinJColumn {
                 get {
                     return this.columnMinJ;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MinKColumn {
-                get {
-                    return this.columnMinK;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MinLColumn {
-                get {
-                    return this.columnMinL;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn MinMColumn {
-                get {
-                    return this.columnMinM;
                 }
             }
             
@@ -3278,6 +3230,54 @@ namespace GADB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MaxKColumn {
+                get {
+                    return this.columnMaxK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MaxLColumn {
+                get {
+                    return this.columnMaxL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MaxMColumn {
+                get {
+                    return this.columnMaxM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MinKColumn {
+                get {
+                    return this.columnMinK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MinLColumn {
+                get {
+                    return this.columnMinL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MinMColumn {
+                get {
+                    return this.columnMinM;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -3331,9 +3331,6 @@ namespace GADB {
                         double MaxH, 
                         double MaxI, 
                         double MaxJ, 
-                        int MaxK, 
-                        int MaxL, 
-                        int MaxM, 
                         double MinD, 
                         double MinE, 
                         double MinF, 
@@ -3341,9 +3338,6 @@ namespace GADB {
                         double MinH, 
                         double MinI, 
                         double MinJ, 
-                        int MinK, 
-                        int MinL, 
-                        int MinM, 
                         double DFine, 
                         double EFine, 
                         double FFine, 
@@ -3353,7 +3347,13 @@ namespace GADB {
                         double JFine, 
                         double KFine, 
                         double LFine, 
-                        double MFine) {
+                        double MFine, 
+                        double MaxK, 
+                        double MaxL, 
+                        double MaxM, 
+                        double MinK, 
+                        double MinL, 
+                        double MinM) {
                 ConditionsRow rowConditionsRow = ((ConditionsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -3374,9 +3374,6 @@ namespace GADB {
                         MaxH,
                         MaxI,
                         MaxJ,
-                        MaxK,
-                        MaxL,
-                        MaxM,
                         MinD,
                         MinE,
                         MinF,
@@ -3384,9 +3381,6 @@ namespace GADB {
                         MinH,
                         MinI,
                         MinJ,
-                        MinK,
-                        MinL,
-                        MinM,
                         DFine,
                         EFine,
                         FFine,
@@ -3396,7 +3390,13 @@ namespace GADB {
                         JFine,
                         KFine,
                         LFine,
-                        MFine};
+                        MFine,
+                        MaxK,
+                        MaxL,
+                        MaxM,
+                        MinK,
+                        MinL,
+                        MinM};
                 if ((parentProblemsRowByProblems_KnapConditions != null)) {
                     columnValuesArray[1] = parentProblemsRowByProblems_KnapConditions[1];
                 }
@@ -3447,9 +3447,6 @@ namespace GADB {
                 this.columnMaxH = base.Columns["MaxH"];
                 this.columnMaxI = base.Columns["MaxI"];
                 this.columnMaxJ = base.Columns["MaxJ"];
-                this.columnMaxK = base.Columns["MaxK"];
-                this.columnMaxL = base.Columns["MaxL"];
-                this.columnMaxM = base.Columns["MaxM"];
                 this.columnMinD = base.Columns["MinD"];
                 this.columnMinE = base.Columns["MinE"];
                 this.columnMinF = base.Columns["MinF"];
@@ -3457,9 +3454,6 @@ namespace GADB {
                 this.columnMinH = base.Columns["MinH"];
                 this.columnMinI = base.Columns["MinI"];
                 this.columnMinJ = base.Columns["MinJ"];
-                this.columnMinK = base.Columns["MinK"];
-                this.columnMinL = base.Columns["MinL"];
-                this.columnMinM = base.Columns["MinM"];
                 this.columnDFine = base.Columns["DFine"];
                 this.columnEFine = base.Columns["EFine"];
                 this.columnFFine = base.Columns["FFine"];
@@ -3470,6 +3464,12 @@ namespace GADB {
                 this.columnKFine = base.Columns["KFine"];
                 this.columnLFine = base.Columns["LFine"];
                 this.columnMFine = base.Columns["MFine"];
+                this.columnMaxK = base.Columns["MaxK"];
+                this.columnMaxL = base.Columns["MaxL"];
+                this.columnMaxM = base.Columns["MaxM"];
+                this.columnMinK = base.Columns["MinK"];
+                this.columnMinL = base.Columns["MinL"];
+                this.columnMinM = base.Columns["MinM"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3511,12 +3511,6 @@ namespace GADB {
                 base.Columns.Add(this.columnMaxI);
                 this.columnMaxJ = new global::System.Data.DataColumn("MaxJ", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMaxJ);
-                this.columnMaxK = new global::System.Data.DataColumn("MaxK", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMaxK);
-                this.columnMaxL = new global::System.Data.DataColumn("MaxL", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMaxL);
-                this.columnMaxM = new global::System.Data.DataColumn("MaxM", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMaxM);
                 this.columnMinD = new global::System.Data.DataColumn("MinD", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMinD);
                 this.columnMinE = new global::System.Data.DataColumn("MinE", typeof(double), null, global::System.Data.MappingType.Element);
@@ -3531,12 +3525,6 @@ namespace GADB {
                 base.Columns.Add(this.columnMinI);
                 this.columnMinJ = new global::System.Data.DataColumn("MinJ", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMinJ);
-                this.columnMinK = new global::System.Data.DataColumn("MinK", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMinK);
-                this.columnMinL = new global::System.Data.DataColumn("MinL", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMinL);
-                this.columnMinM = new global::System.Data.DataColumn("MinM", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMinM);
                 this.columnDFine = new global::System.Data.DataColumn("DFine", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDFine);
                 this.columnEFine = new global::System.Data.DataColumn("EFine", typeof(double), null, global::System.Data.MappingType.Element);
@@ -3557,6 +3545,18 @@ namespace GADB {
                 base.Columns.Add(this.columnLFine);
                 this.columnMFine = new global::System.Data.DataColumn("MFine", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMFine);
+                this.columnMaxK = new global::System.Data.DataColumn("MaxK", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMaxK);
+                this.columnMaxL = new global::System.Data.DataColumn("MaxL", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMaxL);
+                this.columnMaxM = new global::System.Data.DataColumn("MaxM", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMaxM);
+                this.columnMinK = new global::System.Data.DataColumn("MinK", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMinK);
+                this.columnMinL = new global::System.Data.DataColumn("MinL", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMinL);
+                this.columnMinM = new global::System.Data.DataColumn("MinM", typeof(double), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMinM);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID}, true));
                 this.columnID.AutoIncrement = true;
@@ -5754,10 +5754,10 @@ namespace GADB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int K {
+            public double K {
                 get {
                     try {
-                        return ((int)(this[this.tableData.KColumn]));
+                        return ((double)(this[this.tableData.KColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'K\' in table \'Data\' is DBNull.", e);
@@ -5770,10 +5770,10 @@ namespace GADB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int L {
+            public double L {
                 get {
                     try {
-                        return ((int)(this[this.tableData.LColumn]));
+                        return ((double)(this[this.tableData.LColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'L\' in table \'Data\' is DBNull.", e);
@@ -5786,10 +5786,10 @@ namespace GADB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int M {
+            public double M {
                 get {
                     try {
-                        return ((int)(this[this.tableData.MColumn]));
+                        return ((double)(this[this.tableData.MColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("The value for column \'M\' in table \'Data\' is DBNull.", e);
@@ -7856,54 +7856,6 @@ namespace GADB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int MaxK {
-                get {
-                    try {
-                        return ((int)(this[this.tableConditions.MaxKColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MaxK\' in table \'Conditions\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableConditions.MaxKColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int MaxL {
-                get {
-                    try {
-                        return ((int)(this[this.tableConditions.MaxLColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MaxL\' in table \'Conditions\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableConditions.MaxLColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int MaxM {
-                get {
-                    try {
-                        return ((int)(this[this.tableConditions.MaxMColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MaxM\' in table \'Conditions\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableConditions.MaxMColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public double MinD {
                 get {
                     try {
@@ -8011,54 +7963,6 @@ namespace GADB {
                 }
                 set {
                     this[this.tableConditions.MinJColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int MinK {
-                get {
-                    try {
-                        return ((int)(this[this.tableConditions.MinKColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MinK\' in table \'Conditions\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableConditions.MinKColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int MinL {
-                get {
-                    try {
-                        return ((int)(this[this.tableConditions.MinLColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MinL\' in table \'Conditions\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableConditions.MinLColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int MinM {
-                get {
-                    try {
-                        return ((int)(this[this.tableConditions.MinMColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MinM\' in table \'Conditions\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableConditions.MinMColumn] = value;
                 }
             }
             
@@ -8219,6 +8123,102 @@ namespace GADB {
                 }
                 set {
                     this[this.tableConditions.MFineColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double MaxK {
+                get {
+                    try {
+                        return ((double)(this[this.tableConditions.MaxKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MaxK\' in table \'Conditions\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableConditions.MaxKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double MaxL {
+                get {
+                    try {
+                        return ((double)(this[this.tableConditions.MaxLColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MaxL\' in table \'Conditions\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableConditions.MaxLColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double MaxM {
+                get {
+                    try {
+                        return ((double)(this[this.tableConditions.MaxMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MaxM\' in table \'Conditions\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableConditions.MaxMColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double MinK {
+                get {
+                    try {
+                        return ((double)(this[this.tableConditions.MinKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MinK\' in table \'Conditions\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableConditions.MinKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double MinL {
+                get {
+                    try {
+                        return ((double)(this[this.tableConditions.MinLColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MinL\' in table \'Conditions\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableConditions.MinLColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public double MinM {
+                get {
+                    try {
+                        return ((double)(this[this.tableConditions.MinMColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MinM\' in table \'Conditions\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableConditions.MinMColumn] = value;
                 }
             }
             
@@ -8439,42 +8439,6 @@ namespace GADB {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMaxKNull() {
-                return this.IsNull(this.tableConditions.MaxKColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMaxKNull() {
-                this[this.tableConditions.MaxKColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMaxLNull() {
-                return this.IsNull(this.tableConditions.MaxLColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMaxLNull() {
-                this[this.tableConditions.MaxLColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMaxMNull() {
-                return this.IsNull(this.tableConditions.MaxMColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMaxMNull() {
-                this[this.tableConditions.MaxMColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsMinDNull() {
                 return this.IsNull(this.tableConditions.MinDColumn);
             }
@@ -8555,42 +8519,6 @@ namespace GADB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetMinJNull() {
                 this[this.tableConditions.MinJColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMinKNull() {
-                return this.IsNull(this.tableConditions.MinKColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMinKNull() {
-                this[this.tableConditions.MinKColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMinLNull() {
-                return this.IsNull(this.tableConditions.MinLColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMinLNull() {
-                this[this.tableConditions.MinLColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsMinMNull() {
-                return this.IsNull(this.tableConditions.MinMColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetMinMNull() {
-                this[this.tableConditions.MinMColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8711,6 +8639,78 @@ namespace GADB {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetMFineNull() {
                 this[this.tableConditions.MFineColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMaxKNull() {
+                return this.IsNull(this.tableConditions.MaxKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMaxKNull() {
+                this[this.tableConditions.MaxKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMaxLNull() {
+                return this.IsNull(this.tableConditions.MaxLColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMaxLNull() {
+                this[this.tableConditions.MaxLColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMaxMNull() {
+                return this.IsNull(this.tableConditions.MaxMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMaxMNull() {
+                this[this.tableConditions.MaxMColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMinKNull() {
+                return this.IsNull(this.tableConditions.MinKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMinKNull() {
+                this[this.tableConditions.MinKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMinLNull() {
+                return this.IsNull(this.tableConditions.MinLColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMinLNull() {
+                this[this.tableConditions.MinLColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMinMNull() {
+                return this.IsNull(this.tableConditions.MinMColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMinMNull() {
+                this[this.tableConditions.MinMColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -9984,11 +9984,11 @@ namespace GADB.GADataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_J", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "J", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_J", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "J", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_K", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "K", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_K", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "K", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_K", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "K", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_L", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "L", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_L", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "L", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_L", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "L", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_M", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "M", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_M", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "M", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_M", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "M", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [Data] ([ProblemID], [A], [B], [C], [D], [E], [F], [G], [H], [I], [J], [K], [L], [M]) VALUES (@ProblemID, @A, @B, @C, @D, @E, @F, @G, @H, @I, @J, @K, @L, @M);
@@ -10005,9 +10005,9 @@ SELECT ID, ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M FROM Data WHERE (ID 
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@H", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "H", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@I", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "I", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@J", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "J", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@K", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "K", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@L", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "L", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@M", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "M", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@K", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "K", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@L", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "L", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@M", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "M", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = @"UPDATE [Data] SET [ProblemID] = @ProblemID, [A] = @A, [B] = @B, [C] = @C, [D] = @D, [E] = @E, [F] = @F, [G] = @G, [H] = @H, [I] = @I, [J] = @J, [K] = @K, [L] = @L, [M] = @M WHERE (([ID] = @Original_ID) AND ((@IsNull_ProblemID = 1 AND [ProblemID] IS NULL) OR ([ProblemID] = @Original_ProblemID)) AND ((@IsNull_A = 1 AND [A] IS NULL) OR ([A] = @Original_A)) AND ((@IsNull_B = 1 AND [B] IS NULL) OR ([B] = @Original_B)) AND ((@IsNull_C = 1 AND [C] IS NULL) OR ([C] = @Original_C)) AND ((@IsNull_D = 1 AND [D] IS NULL) OR ([D] = @Original_D)) AND ((@IsNull_E = 1 AND [E] IS NULL) OR ([E] = @Original_E)) AND ((@IsNull_F = 1 AND [F] IS NULL) OR ([F] = @Original_F)) AND ((@IsNull_G = 1 AND [G] IS NULL) OR ([G] = @Original_G)) AND ((@IsNull_H = 1 AND [H] IS NULL) OR ([H] = @Original_H)) AND ((@IsNull_I = 1 AND [I] IS NULL) OR ([I] = @Original_I)) AND ((@IsNull_J = 1 AND [J] IS NULL) OR ([J] = @Original_J)) AND ((@IsNull_K = 1 AND [K] IS NULL) OR ([K] = @Original_K)) AND ((@IsNull_L = 1 AND [L] IS NULL) OR ([L] = @Original_L)) AND ((@IsNull_M = 1 AND [M] IS NULL) OR ([M] = @Original_M)));
@@ -10024,9 +10024,9 @@ SELECT ID, ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M FROM Data WHERE (ID 
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@H", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "H", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@I", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "I", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@J", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "J", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@K", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "K", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@L", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "L", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@M", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "M", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@K", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "K", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@L", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "L", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@M", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "M", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_ProblemID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProblemID", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ProblemID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ProblemID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -10051,11 +10051,11 @@ SELECT ID, ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M FROM Data WHERE (ID 
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_J", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "J", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_J", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "J", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_K", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "K", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_K", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "K", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_K", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "K", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_L", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "L", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_L", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "L", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_L", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "L", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_M", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "M", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_M", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "M", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_M", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "M", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -10069,17 +10069,22 @@ SELECT ID, ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M FROM Data WHERE (ID 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT * FROM Data";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT A, B, C, D, E, F, G, H, I, ID, J, K, L, M, ProblemID FROM Data WHERE (Prob" +
-                "lemID = @problemID)";
+            this._commandCollection[1].CommandText = "DELETE FROM [Data] WHERE ([ProblemID] =@ProblemID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@problemID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ProblemID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProblemID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ProblemID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "SELECT A, B, C, D, E, F, G, H, I, ID, J, K, L, M, ProblemID FROM Data WHERE (Prob" +
+                "lemID = @problemID)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@problemID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ProblemID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10111,7 +10116,7 @@ SELECT ID, ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M FROM Data WHERE (ID 
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillByID(GADataSet.DataDataTable dataTable, global::System.Nullable<int> problemID) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((problemID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((int)(problemID.Value));
             }
@@ -10130,7 +10135,7 @@ SELECT ID, ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M FROM Data WHERE (ID 
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual GADataSet.DataDataTable GetDataByID(global::System.Nullable<int> problemID) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((problemID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((int)(problemID.Value));
             }
@@ -10175,7 +10180,7 @@ SELECT ID, ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M FROM Data WHERE (ID 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_ID, global::System.Nullable<int> Original_ProblemID, global::System.Nullable<double> Original_A, global::System.Nullable<double> Original_B, global::System.Nullable<double> Original_C, global::System.Nullable<double> Original_D, global::System.Nullable<double> Original_E, global::System.Nullable<double> Original_F, global::System.Nullable<double> Original_G, global::System.Nullable<double> Original_H, global::System.Nullable<double> Original_I, global::System.Nullable<double> Original_J, global::System.Nullable<int> Original_K, global::System.Nullable<int> Original_L, global::System.Nullable<int> Original_M) {
+        public virtual int Delete(int Original_ID, global::System.Nullable<int> Original_ProblemID, global::System.Nullable<double> Original_A, global::System.Nullable<double> Original_B, global::System.Nullable<double> Original_C, global::System.Nullable<double> Original_D, global::System.Nullable<double> Original_E, global::System.Nullable<double> Original_F, global::System.Nullable<double> Original_G, global::System.Nullable<double> Original_H, global::System.Nullable<double> Original_I, global::System.Nullable<double> Original_J, global::System.Nullable<double> Original_K, global::System.Nullable<double> Original_L, global::System.Nullable<double> Original_M) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_ID));
             if ((Original_ProblemID.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -10267,7 +10272,7 @@ SELECT ID, ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M FROM Data WHERE (ID 
             }
             if ((Original_K.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((int)(Original_K.Value));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((double)(Original_K.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
@@ -10275,7 +10280,7 @@ SELECT ID, ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M FROM Data WHERE (ID 
             }
             if ((Original_L.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((int)(Original_L.Value));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((double)(Original_L.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
@@ -10283,7 +10288,7 @@ SELECT ID, ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M FROM Data WHERE (ID 
             }
             if ((Original_M.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[28].Value = ((int)(Original_M.Value));
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((double)(Original_M.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
@@ -10309,7 +10314,7 @@ SELECT ID, ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M FROM Data WHERE (ID 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> ProblemID, global::System.Nullable<double> A, global::System.Nullable<double> B, global::System.Nullable<double> C, global::System.Nullable<double> D, global::System.Nullable<double> E, global::System.Nullable<double> F, global::System.Nullable<double> G, global::System.Nullable<double> H, global::System.Nullable<double> I, global::System.Nullable<double> J, global::System.Nullable<int> K, global::System.Nullable<int> L, global::System.Nullable<int> M) {
+        public virtual int Insert(global::System.Nullable<int> ProblemID, global::System.Nullable<double> A, global::System.Nullable<double> B, global::System.Nullable<double> C, global::System.Nullable<double> D, global::System.Nullable<double> E, global::System.Nullable<double> F, global::System.Nullable<double> G, global::System.Nullable<double> H, global::System.Nullable<double> I, global::System.Nullable<double> J, global::System.Nullable<double> K, global::System.Nullable<double> L, global::System.Nullable<double> M) {
             if ((ProblemID.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((int)(ProblemID.Value));
             }
@@ -10377,19 +10382,19 @@ SELECT ID, ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M FROM Data WHERE (ID 
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             if ((K.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(K.Value));
+                this.Adapter.InsertCommand.Parameters[11].Value = ((double)(K.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             if ((L.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((int)(L.Value));
+                this.Adapter.InsertCommand.Parameters[12].Value = ((double)(L.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             if ((M.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(M.Value));
+                this.Adapter.InsertCommand.Parameters[13].Value = ((double)(M.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
@@ -10426,9 +10431,9 @@ SELECT ID, ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M FROM Data WHERE (ID 
                     global::System.Nullable<double> H, 
                     global::System.Nullable<double> I, 
                     global::System.Nullable<double> J, 
-                    global::System.Nullable<int> K, 
-                    global::System.Nullable<int> L, 
-                    global::System.Nullable<int> M, 
+                    global::System.Nullable<double> K, 
+                    global::System.Nullable<double> L, 
+                    global::System.Nullable<double> M, 
                     int Original_ID, 
                     global::System.Nullable<int> Original_ProblemID, 
                     global::System.Nullable<double> Original_A, 
@@ -10441,9 +10446,9 @@ SELECT ID, ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M FROM Data WHERE (ID 
                     global::System.Nullable<double> Original_H, 
                     global::System.Nullable<double> Original_I, 
                     global::System.Nullable<double> Original_J, 
-                    global::System.Nullable<int> Original_K, 
-                    global::System.Nullable<int> Original_L, 
-                    global::System.Nullable<int> Original_M, 
+                    global::System.Nullable<double> Original_K, 
+                    global::System.Nullable<double> Original_L, 
+                    global::System.Nullable<double> Original_M, 
                     int ID) {
             if ((ProblemID.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(ProblemID.Value));
@@ -10512,19 +10517,19 @@ SELECT ID, ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M FROM Data WHERE (ID 
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             if ((K.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(K.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((double)(K.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             if ((L.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(L.Value));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((double)(L.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             if ((M.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(M.Value));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((double)(M.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
@@ -10620,7 +10625,7 @@ SELECT ID, ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M FROM Data WHERE (ID 
             }
             if ((Original_K.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((int)(Original_K.Value));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((double)(Original_K.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
@@ -10628,7 +10633,7 @@ SELECT ID, ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M FROM Data WHERE (ID 
             }
             if ((Original_L.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(Original_L.Value));
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((double)(Original_L.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
@@ -10636,7 +10641,7 @@ SELECT ID, ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M FROM Data WHERE (ID 
             }
             if ((Original_M.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[42].Value = ((int)(Original_M.Value));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((double)(Original_M.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[41].Value = ((object)(1));
@@ -10675,9 +10680,9 @@ SELECT ID, ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M FROM Data WHERE (ID 
                     global::System.Nullable<double> H, 
                     global::System.Nullable<double> I, 
                     global::System.Nullable<double> J, 
-                    global::System.Nullable<int> K, 
-                    global::System.Nullable<int> L, 
-                    global::System.Nullable<int> M, 
+                    global::System.Nullable<double> K, 
+                    global::System.Nullable<double> L, 
+                    global::System.Nullable<double> M, 
                     int Original_ID, 
                     global::System.Nullable<int> Original_ProblemID, 
                     global::System.Nullable<double> Original_A, 
@@ -10690,10 +10695,39 @@ SELECT ID, ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M FROM Data WHERE (ID 
                     global::System.Nullable<double> Original_H, 
                     global::System.Nullable<double> Original_I, 
                     global::System.Nullable<double> Original_J, 
-                    global::System.Nullable<int> Original_K, 
-                    global::System.Nullable<int> Original_L, 
-                    global::System.Nullable<int> Original_M) {
+                    global::System.Nullable<double> Original_K, 
+                    global::System.Nullable<double> Original_L, 
+                    global::System.Nullable<double> Original_M) {
             return this.Update(ProblemID, A, B, C, D, E, F, G, H, I, J, K, L, M, Original_ID, Original_ProblemID, Original_A, Original_B, Original_C, Original_D, Original_E, Original_F, Original_G, Original_H, Original_I, Original_J, Original_K, Original_L, Original_M, Original_ID);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteByID(global::System.Nullable<int> ProblemID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((ProblemID.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(ProblemID.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
@@ -10924,13 +10958,14 @@ SELECT ID, ProblemID, Genotype, Fitness, DateTime, TimeSpan, Generations, GAID, 
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT * FROM Solutions";
+            this._commandCollection[0].CommandText = "SELECT      ID, ProblemID, Genotype, Fitness, DateTime, TimeSpan, Generations, GA" +
+                "ID, Frequency, SchOrder, Okays, Chromosome, Counter\r\nFROM         Solutions";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT      ID, ProblemID, Genotype, Fitness, DateTime, TimeSpan, Generations, GA" +
-                "ID, Frequency, SchOrder, Okays, Chromosome, Counter\r\nFROM         Solutions\r\nWHE" +
-                "RE      (ProblemID = @problemID)";
+            this._commandCollection[1].CommandText = "SELECT Chromosome, Counter, DateTime, Fitness, Frequency, GAID, Generations, Geno" +
+                "type, ID, Okays, ProblemID, SchOrder, TimeSpan FROM Solutions WHERE (ProblemID =" +
+                " @problemID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@problemID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ProblemID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
@@ -13163,9 +13198,6 @@ SELECT ID, ProblemID, Label, MinSize, MaxSize, Iters FROM Problems WHERE (ID = @
             tableMapping.ColumnMappings.Add("MaxH", "MaxH");
             tableMapping.ColumnMappings.Add("MaxI", "MaxI");
             tableMapping.ColumnMappings.Add("MaxJ", "MaxJ");
-            tableMapping.ColumnMappings.Add("MaxK", "MaxK");
-            tableMapping.ColumnMappings.Add("MaxL", "MaxL");
-            tableMapping.ColumnMappings.Add("MaxM", "MaxM");
             tableMapping.ColumnMappings.Add("MinD", "MinD");
             tableMapping.ColumnMappings.Add("MinE", "MinE");
             tableMapping.ColumnMappings.Add("MinF", "MinF");
@@ -13173,9 +13205,6 @@ SELECT ID, ProblemID, Label, MinSize, MaxSize, Iters FROM Problems WHERE (ID = @
             tableMapping.ColumnMappings.Add("MinH", "MinH");
             tableMapping.ColumnMappings.Add("MinI", "MinI");
             tableMapping.ColumnMappings.Add("MinJ", "MinJ");
-            tableMapping.ColumnMappings.Add("MinK", "MinK");
-            tableMapping.ColumnMappings.Add("MinL", "MinL");
-            tableMapping.ColumnMappings.Add("MinM", "MinM");
             tableMapping.ColumnMappings.Add("DFine", "DFine");
             tableMapping.ColumnMappings.Add("EFine", "EFine");
             tableMapping.ColumnMappings.Add("FFine", "FFine");
@@ -13186,6 +13215,12 @@ SELECT ID, ProblemID, Label, MinSize, MaxSize, Iters FROM Problems WHERE (ID = @
             tableMapping.ColumnMappings.Add("KFine", "KFine");
             tableMapping.ColumnMappings.Add("LFine", "LFine");
             tableMapping.ColumnMappings.Add("MFine", "MFine");
+            tableMapping.ColumnMappings.Add("MaxK", "MaxK");
+            tableMapping.ColumnMappings.Add("MaxL", "MaxL");
+            tableMapping.ColumnMappings.Add("MaxM", "MaxM");
+            tableMapping.ColumnMappings.Add("MinK", "MinK");
+            tableMapping.ColumnMappings.Add("MinL", "MinL");
+            tableMapping.ColumnMappings.Add("MinM", "MinM");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -13253,11 +13288,11 @@ SELECT ID, ProblemID, Label, MinSize, MaxSize, Iters FROM Problems WHERE (ID = @
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MaxJ", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxJ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MaxJ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxJ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MaxK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxK", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MaxK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxK", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MaxK", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxK", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MaxL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxL", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MaxL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MaxL", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MaxM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MaxM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MaxM", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MinA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MinA", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MinB", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinB", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -13279,11 +13314,11 @@ SELECT ID, ProblemID, Label, MinSize, MaxSize, Iters FROM Problems WHERE (ID = @
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MinJ", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinJ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MinJ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinJ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MinK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinK", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MinK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinK", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MinK", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinK", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MinL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinL", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MinL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MinL", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MinM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MinM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MinM", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AFine", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AFine", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AFine", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AFine", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BFine", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BFine", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -13326,9 +13361,9 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaxH", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaxI", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaxJ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxJ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaxK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaxL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaxM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaxK", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaxL", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaxM", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinA", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinB", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinB", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinC", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -13339,9 +13374,9 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinH", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinI", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinJ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinJ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinK", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinL", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinM", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AFine", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AFine", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BFine", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BFine", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CFine", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CFine", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -13420,9 +13455,9 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaxH", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaxI", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaxJ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxJ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaxK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaxL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaxM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaxK", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaxL", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MaxM", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinA", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinB", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinB", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinC", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -13433,9 +13468,9 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinH", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinH", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinI", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinJ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinJ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinK", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinK", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinL", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinL", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MinM", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@AFine", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AFine", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BFine", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BFine", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CFine", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CFine", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -13473,11 +13508,11 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MaxJ", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxJ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MaxJ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxJ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MaxK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxK", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MaxK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxK", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MaxK", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxK", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MaxL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxL", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MaxL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MaxL", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MaxM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MaxM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MaxM", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MaxM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MinA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinA", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MinA", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MinB", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinB", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -13499,11 +13534,11 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MinJ", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinJ", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MinJ", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinJ", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MinK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinK", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MinK", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinK", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MinK", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinK", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MinL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinL", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MinL", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MinL", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinL", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MinM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MinM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MinM", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MinM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_AFine", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AFine", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_AFine", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "AFine", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_BFine", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BFine", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -13543,16 +13578,21 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[3];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT * FROM Conditions";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = @"SELECT AFine, BFine, CFine, DFine, EFine, FFine, GFine, HFine, ID, IFine, JFine, KFine, LFine, MFine, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ, MaxK, MaxL, MaxM, MinA, MinB, MinC, MinD, MinE, MinF, MinG, MinH, MinI, MinJ, MinK, MinL, MinM, ProblemID FROM Conditions WHERE (ProblemID = @problemID)";
+            this._commandCollection[1].CommandText = "DELETE FROM [Conditions] WHERE ([ProblemID] = @ProblemID)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
-            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@problemID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ProblemID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ProblemID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ProblemID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._commandCollection[2] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = @"SELECT AFine, BFine, CFine, DFine, EFine, FFine, GFine, HFine, ID, IFine, JFine, KFine, LFine, MFine, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ, MaxK, MaxL, MaxM, MinA, MinB, MinC, MinD, MinE, MinF, MinG, MinH, MinI, MinJ, MinK, MinL, MinM, ProblemID FROM Conditions WHERE (ProblemID = @problemID)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[2].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@problemID", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ProblemID", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -13584,7 +13624,7 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
         public virtual int FillByID(GADataSet.ConditionsDataTable dataTable, global::System.Nullable<int> problemID) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((problemID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((int)(problemID.Value));
             }
@@ -13603,7 +13643,7 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
         public virtual GADataSet.ConditionsDataTable GetDataByID(global::System.Nullable<int> problemID) {
-            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand = this.CommandCollection[2];
             if ((problemID.HasValue == true)) {
                 this.Adapter.SelectCommand.Parameters[0].Value = ((int)(problemID.Value));
             }
@@ -13661,9 +13701,9 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
                     global::System.Nullable<double> Original_MaxH, 
                     global::System.Nullable<double> Original_MaxI, 
                     global::System.Nullable<double> Original_MaxJ, 
-                    global::System.Nullable<int> Original_MaxK, 
-                    global::System.Nullable<int> Original_MaxL, 
-                    global::System.Nullable<int> Original_MaxM, 
+                    global::System.Nullable<double> Original_MaxK, 
+                    global::System.Nullable<double> Original_MaxL, 
+                    global::System.Nullable<double> Original_MaxM, 
                     global::System.Nullable<double> Original_MinA, 
                     global::System.Nullable<double> Original_MinB, 
                     global::System.Nullable<double> Original_MinC, 
@@ -13674,9 +13714,9 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
                     global::System.Nullable<double> Original_MinH, 
                     global::System.Nullable<double> Original_MinI, 
                     global::System.Nullable<double> Original_MinJ, 
-                    global::System.Nullable<int> Original_MinK, 
-                    global::System.Nullable<int> Original_MinL, 
-                    global::System.Nullable<int> Original_MinM, 
+                    global::System.Nullable<double> Original_MinK, 
+                    global::System.Nullable<double> Original_MinL, 
+                    global::System.Nullable<double> Original_MinM, 
                     global::System.Nullable<double> Original_AFine, 
                     global::System.Nullable<double> Original_BFine, 
                     global::System.Nullable<double> Original_CFine, 
@@ -13781,7 +13821,7 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
             }
             if ((Original_MaxK.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((int)(Original_MaxK.Value));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((double)(Original_MaxK.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
@@ -13789,7 +13829,7 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
             }
             if ((Original_MaxL.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((int)(Original_MaxL.Value));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((double)(Original_MaxL.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
@@ -13797,7 +13837,7 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
             }
             if ((Original_MaxM.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[28].Value = ((int)(Original_MaxM.Value));
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((double)(Original_MaxM.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
@@ -13885,7 +13925,7 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
             }
             if ((Original_MinK.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[49].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[50].Value = ((int)(Original_MinK.Value));
+                this.Adapter.DeleteCommand.Parameters[50].Value = ((double)(Original_MinK.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[49].Value = ((object)(1));
@@ -13893,7 +13933,7 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
             }
             if ((Original_MinL.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[51].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[52].Value = ((int)(Original_MinL.Value));
+                this.Adapter.DeleteCommand.Parameters[52].Value = ((double)(Original_MinL.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[51].Value = ((object)(1));
@@ -13901,7 +13941,7 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
             }
             if ((Original_MinM.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[53].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[54].Value = ((int)(Original_MinM.Value));
+                this.Adapter.DeleteCommand.Parameters[54].Value = ((double)(Original_MinM.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[53].Value = ((object)(1));
@@ -14043,9 +14083,9 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
                     global::System.Nullable<double> MaxH, 
                     global::System.Nullable<double> MaxI, 
                     global::System.Nullable<double> MaxJ, 
-                    global::System.Nullable<int> MaxK, 
-                    global::System.Nullable<int> MaxL, 
-                    global::System.Nullable<int> MaxM, 
+                    global::System.Nullable<double> MaxK, 
+                    global::System.Nullable<double> MaxL, 
+                    global::System.Nullable<double> MaxM, 
                     global::System.Nullable<double> MinA, 
                     global::System.Nullable<double> MinB, 
                     global::System.Nullable<double> MinC, 
@@ -14056,9 +14096,9 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
                     global::System.Nullable<double> MinH, 
                     global::System.Nullable<double> MinI, 
                     global::System.Nullable<double> MinJ, 
-                    global::System.Nullable<int> MinK, 
-                    global::System.Nullable<int> MinL, 
-                    global::System.Nullable<int> MinM, 
+                    global::System.Nullable<double> MinK, 
+                    global::System.Nullable<double> MinL, 
+                    global::System.Nullable<double> MinM, 
                     global::System.Nullable<double> AFine, 
                     global::System.Nullable<double> BFine, 
                     global::System.Nullable<double> CFine, 
@@ -14139,19 +14179,19 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
                 this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             if ((MaxK.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[11].Value = ((int)(MaxK.Value));
+                this.Adapter.InsertCommand.Parameters[11].Value = ((double)(MaxK.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             if ((MaxL.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((int)(MaxL.Value));
+                this.Adapter.InsertCommand.Parameters[12].Value = ((double)(MaxL.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             if ((MaxM.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((int)(MaxM.Value));
+                this.Adapter.InsertCommand.Parameters[13].Value = ((double)(MaxM.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
@@ -14217,19 +14257,19 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
                 this.Adapter.InsertCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             if ((MinK.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[24].Value = ((int)(MinK.Value));
+                this.Adapter.InsertCommand.Parameters[24].Value = ((double)(MinK.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             if ((MinL.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[25].Value = ((int)(MinL.Value));
+                this.Adapter.InsertCommand.Parameters[25].Value = ((double)(MinL.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             if ((MinM.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[26].Value = ((int)(MinM.Value));
+                this.Adapter.InsertCommand.Parameters[26].Value = ((double)(MinM.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[26].Value = global::System.DBNull.Value;
@@ -14344,9 +14384,9 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
                     global::System.Nullable<double> MaxH, 
                     global::System.Nullable<double> MaxI, 
                     global::System.Nullable<double> MaxJ, 
-                    global::System.Nullable<int> MaxK, 
-                    global::System.Nullable<int> MaxL, 
-                    global::System.Nullable<int> MaxM, 
+                    global::System.Nullable<double> MaxK, 
+                    global::System.Nullable<double> MaxL, 
+                    global::System.Nullable<double> MaxM, 
                     global::System.Nullable<double> MinA, 
                     global::System.Nullable<double> MinB, 
                     global::System.Nullable<double> MinC, 
@@ -14357,9 +14397,9 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
                     global::System.Nullable<double> MinH, 
                     global::System.Nullable<double> MinI, 
                     global::System.Nullable<double> MinJ, 
-                    global::System.Nullable<int> MinK, 
-                    global::System.Nullable<int> MinL, 
-                    global::System.Nullable<int> MinM, 
+                    global::System.Nullable<double> MinK, 
+                    global::System.Nullable<double> MinL, 
+                    global::System.Nullable<double> MinM, 
                     global::System.Nullable<double> AFine, 
                     global::System.Nullable<double> BFine, 
                     global::System.Nullable<double> CFine, 
@@ -14385,9 +14425,9 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
                     global::System.Nullable<double> Original_MaxH, 
                     global::System.Nullable<double> Original_MaxI, 
                     global::System.Nullable<double> Original_MaxJ, 
-                    global::System.Nullable<int> Original_MaxK, 
-                    global::System.Nullable<int> Original_MaxL, 
-                    global::System.Nullable<int> Original_MaxM, 
+                    global::System.Nullable<double> Original_MaxK, 
+                    global::System.Nullable<double> Original_MaxL, 
+                    global::System.Nullable<double> Original_MaxM, 
                     global::System.Nullable<double> Original_MinA, 
                     global::System.Nullable<double> Original_MinB, 
                     global::System.Nullable<double> Original_MinC, 
@@ -14398,9 +14438,9 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
                     global::System.Nullable<double> Original_MinH, 
                     global::System.Nullable<double> Original_MinI, 
                     global::System.Nullable<double> Original_MinJ, 
-                    global::System.Nullable<int> Original_MinK, 
-                    global::System.Nullable<int> Original_MinL, 
-                    global::System.Nullable<int> Original_MinM, 
+                    global::System.Nullable<double> Original_MinK, 
+                    global::System.Nullable<double> Original_MinL, 
+                    global::System.Nullable<double> Original_MinM, 
                     global::System.Nullable<double> Original_AFine, 
                     global::System.Nullable<double> Original_BFine, 
                     global::System.Nullable<double> Original_CFine, 
@@ -14482,19 +14522,19 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
                 this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             if ((MaxK.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(MaxK.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((double)(MaxK.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
             if ((MaxL.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(MaxL.Value));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((double)(MaxL.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             if ((MaxM.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(MaxM.Value));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((double)(MaxM.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
@@ -14560,19 +14600,19 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
                 this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             if ((MinK.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(MinK.Value));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((double)(MinK.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             if ((MinL.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(MinL.Value));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((double)(MinL.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             if ((MinM.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(MinM.Value));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((double)(MinM.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
@@ -14746,7 +14786,7 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
             }
             if ((Original_MaxK.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[64].Value = ((int)(Original_MaxK.Value));
+                this.Adapter.UpdateCommand.Parameters[64].Value = ((double)(Original_MaxK.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[63].Value = ((object)(1));
@@ -14754,7 +14794,7 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
             }
             if ((Original_MaxL.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[66].Value = ((int)(Original_MaxL.Value));
+                this.Adapter.UpdateCommand.Parameters[66].Value = ((double)(Original_MaxL.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[65].Value = ((object)(1));
@@ -14762,7 +14802,7 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
             }
             if ((Original_MaxM.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[68].Value = ((int)(Original_MaxM.Value));
+                this.Adapter.UpdateCommand.Parameters[68].Value = ((double)(Original_MaxM.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[67].Value = ((object)(1));
@@ -14850,7 +14890,7 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
             }
             if ((Original_MinK.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[89].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[90].Value = ((int)(Original_MinK.Value));
+                this.Adapter.UpdateCommand.Parameters[90].Value = ((double)(Original_MinK.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[89].Value = ((object)(1));
@@ -14858,7 +14898,7 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
             }
             if ((Original_MinL.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[91].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[92].Value = ((int)(Original_MinL.Value));
+                this.Adapter.UpdateCommand.Parameters[92].Value = ((double)(Original_MinL.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[91].Value = ((object)(1));
@@ -14866,7 +14906,7 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
             }
             if ((Original_MinM.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[93].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[94].Value = ((int)(Original_MinM.Value));
+                this.Adapter.UpdateCommand.Parameters[94].Value = ((double)(Original_MinM.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[93].Value = ((object)(1));
@@ -15009,9 +15049,9 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
                     global::System.Nullable<double> MaxH, 
                     global::System.Nullable<double> MaxI, 
                     global::System.Nullable<double> MaxJ, 
-                    global::System.Nullable<int> MaxK, 
-                    global::System.Nullable<int> MaxL, 
-                    global::System.Nullable<int> MaxM, 
+                    global::System.Nullable<double> MaxK, 
+                    global::System.Nullable<double> MaxL, 
+                    global::System.Nullable<double> MaxM, 
                     global::System.Nullable<double> MinA, 
                     global::System.Nullable<double> MinB, 
                     global::System.Nullable<double> MinC, 
@@ -15022,9 +15062,9 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
                     global::System.Nullable<double> MinH, 
                     global::System.Nullable<double> MinI, 
                     global::System.Nullable<double> MinJ, 
-                    global::System.Nullable<int> MinK, 
-                    global::System.Nullable<int> MinL, 
-                    global::System.Nullable<int> MinM, 
+                    global::System.Nullable<double> MinK, 
+                    global::System.Nullable<double> MinL, 
+                    global::System.Nullable<double> MinM, 
                     global::System.Nullable<double> AFine, 
                     global::System.Nullable<double> BFine, 
                     global::System.Nullable<double> CFine, 
@@ -15050,9 +15090,9 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
                     global::System.Nullable<double> Original_MaxH, 
                     global::System.Nullable<double> Original_MaxI, 
                     global::System.Nullable<double> Original_MaxJ, 
-                    global::System.Nullable<int> Original_MaxK, 
-                    global::System.Nullable<int> Original_MaxL, 
-                    global::System.Nullable<int> Original_MaxM, 
+                    global::System.Nullable<double> Original_MaxK, 
+                    global::System.Nullable<double> Original_MaxL, 
+                    global::System.Nullable<double> Original_MaxM, 
                     global::System.Nullable<double> Original_MinA, 
                     global::System.Nullable<double> Original_MinB, 
                     global::System.Nullable<double> Original_MinC, 
@@ -15063,9 +15103,9 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
                     global::System.Nullable<double> Original_MinH, 
                     global::System.Nullable<double> Original_MinI, 
                     global::System.Nullable<double> Original_MinJ, 
-                    global::System.Nullable<int> Original_MinK, 
-                    global::System.Nullable<int> Original_MinL, 
-                    global::System.Nullable<int> Original_MinM, 
+                    global::System.Nullable<double> Original_MinK, 
+                    global::System.Nullable<double> Original_MinL, 
+                    global::System.Nullable<double> Original_MinM, 
                     global::System.Nullable<double> Original_AFine, 
                     global::System.Nullable<double> Original_BFine, 
                     global::System.Nullable<double> Original_CFine, 
@@ -15080,6 +15120,35 @@ SELECT ID, ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ
                     global::System.Nullable<double> Original_LFine, 
                     global::System.Nullable<double> Original_MFine) {
             return this.Update(ProblemID, MaxA, MaxB, MaxC, MaxD, MaxE, MaxF, MaxG, MaxH, MaxI, MaxJ, MaxK, MaxL, MaxM, MinA, MinB, MinC, MinD, MinE, MinF, MinG, MinH, MinI, MinJ, MinK, MinL, MinM, AFine, BFine, CFine, DFine, EFine, FFine, GFine, HFine, IFine, JFine, KFine, LFine, MFine, Original_ID, Original_ProblemID, Original_MaxA, Original_MaxB, Original_MaxC, Original_MaxD, Original_MaxE, Original_MaxF, Original_MaxG, Original_MaxH, Original_MaxI, Original_MaxJ, Original_MaxK, Original_MaxL, Original_MaxM, Original_MinA, Original_MinB, Original_MinC, Original_MinD, Original_MinE, Original_MinF, Original_MinG, Original_MinH, Original_MinI, Original_MinJ, Original_MinK, Original_MinL, Original_MinM, Original_AFine, Original_BFine, Original_CFine, Original_DFine, Original_EFine, Original_FFine, Original_GFine, Original_HFine, Original_IFine, Original_JFine, Original_KFine, Original_LFine, Original_MFine, Original_ID);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int DeleteByID(global::System.Nullable<int> ProblemID) {
+            global::System.Data.SqlClient.SqlCommand command = this.CommandCollection[1];
+            if ((ProblemID.HasValue == true)) {
+                command.Parameters[0].Value = ((int)(ProblemID.Value));
+            }
+            else {
+                command.Parameters[0].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     

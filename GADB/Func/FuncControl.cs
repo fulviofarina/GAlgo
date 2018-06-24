@@ -1,7 +1,7 @@
-﻿using System;
+﻿using GeneticSharp.Domain.Chromosomes;
+using System;
 using System.Data;
 using System.Linq;
-using GeneticSharp.Domain.Chromosomes;
 
 namespace GADB
 {

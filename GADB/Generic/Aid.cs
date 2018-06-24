@@ -144,7 +144,14 @@ namespace GADB
                 int index = Genes.ElementAt(i);
                 if (index != -1)
                 {
-                    TotalValue += values[index - 1].Field<double>(field);
+                   bool nul =  values[index - 1].IsNull(field);
+                  
+                    if (!nul)
+                    {
+                        double val = values[index - 1].Field<double>(field);
+                        TotalValue += (double)val;
+
+                    }
                 }
             }
 
@@ -213,6 +220,8 @@ namespace GADB
                 //si está presente, entonces sumo el valor y el peso al contenedor
                 if (index != -1)
                 {
+                   
+
                     text += (index).ToString();
                 }
                 else
@@ -251,7 +260,11 @@ namespace GADB
                 //si está presente, entonces sumo el valor y el peso al contenedor
                 if (index != -1)
                 {
-                    text += values[index - 1].Field<double>(field).ToString();
+                    bool nul = values[index - 1].IsNull(field);
+                    if (!nul)
+                    {
+                        text += values[index - 1].Field<double>(field).ToString();
+                    }
                 }
                 else
                 {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using GeneticSharp.Domain;
 using GeneticSharp.Domain.Chromosomes;
@@ -8,7 +9,91 @@ namespace GADB
 {
     partial class GADataSet
     {
+        public void FillExternalProblems(ref System.Data.DataRow[] problemRows, string field, string fieldID, int minSize, int maxSize, int nrOfIters)
+        {
+            this.Problems.Clear();
 
+            foreach (var pinput in problemRows)
+            {
+                ProblemsRow p = this.Problems.NewProblemsRow();
+                this.Problems.AddProblemsRow(p);
+                p.ExternalDataObject = pinput;
+                p.Label = pinput.Field<string>(field);
+                p.MaxSize = maxSize;
+                p.MinSize = minSize;
+                p.Iters = nrOfIters;
+                p.ProblemID = pinput.Field<int>(fieldID);
+            }
+        }
+
+        public void FillExternalData(int problemID, int[] subProblemIDs)
+        {
+            GADataSetTableAdapters.DataTableAdapter data = new GADataSetTableAdapters.DataTableAdapter();
+            GADataSetTableAdapters.ConditionsTableAdapter cota = new GADataSetTableAdapters.ConditionsTableAdapter();
+
+            data.DeleteByID(problemID);
+            cota.DeleteByID(problemID);
+
+            try
+            {
+                foreach (var item in subProblemIDs)
+                {
+                    data.Insert(problemID, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, item, 0, 0);
+                }
+
+                cota.Insert(problemID, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+            }
+            catch (Exception ex)
+            {
+                string a = ex.Message;
+                //string b = a;
+            }
+
+            data.Dispose();
+            cota.Dispose();
+            //    DataRow problemdata = this.Data.NewDataRow();
+            //   this.Data.AddDataRow(problemdata);
+            //    problemdata.ProblemID = problemID;
+            //   problemdata.ExternalDataObject = externalObject;
+
+            //   ConditionsRow c = this.Conditions.NewConditionsRow();
+            //   this.Conditions.AddConditionsRow(c);
+            //   c.ProblemID = problemID;
+        }
+
+        partial class DataRow
+        {
+            private object externalDataObject = null;
+
+            public object ExternalDataObject
+            {
+                get
+                {
+                    return externalDataObject;
+                }
+                set
+                {
+                    externalDataObject = value;
+                }
+            }
+        }
+
+        partial class ProblemsRow
+        {
+            private object externalDataObject = null;
+
+            public object ExternalDataObject
+            {
+                get
+                {
+                    return externalDataObject;
+                }
+                set
+                {
+                    externalDataObject = value;
+                }
+            }
+        }
 
         partial class StringsRow
         {
@@ -56,25 +141,20 @@ namespace GADB
 
                 GenerationCurrent = ga.Population.CurrentGeneration.Number;
                 GenerationTotal = ga.Population.GenerationsNumber;
-
-
             }
+
             public void ConfigTypes(ref Configuration config)
             {
-
                 this.TermID = config.TerminationID;
                 this.MutaID = config.MutationID;
                 this.CrossID = config.CrossoverID;
                 this.SelectID = config.SelectionID;
                 this.ReinsID = config.ReinsertionID;
-
-
             }
+
             public void ConfigTypesNames(ref GeneticAlgorithm ga)
             {
-
                 Termination = ga.Termination.GetType().Name;
-
 
                 string aux = ga.Population.GenerationStrategy.ToString();
                 int lastPoint = aux.LastIndexOf('.');
@@ -97,8 +177,8 @@ namespace GADB
                 aux = ga.Crossover.ToString();
                 lastPoint = aux.LastIndexOf('.');
                 Crossover = aux.Substring(lastPoint + 1);
-
             }
+
             /// <summary>
             ///  mejorar esto para no tener que pasar los nombres
             ///  si los ids que uso coinciden usar la funciona anterior
@@ -106,7 +186,6 @@ namespace GADB
             /// <param name="ga"></param>
             public void Initialize(ref GeneticAlgorithm ga)
             {
-
                 Fitness = 0;
 
                 //TimeSpan te = ga.TimeEvolving;
@@ -115,8 +194,6 @@ namespace GADB
                 CrossProbability = ga.CrossoverProbability;
                 CrossChromeMinLenght = ga.Crossover.MinChromosomeLength;
 
-
-
                 PopMax = ga.Population.MaxSize;
                 PopMin = ga.Population.MinSize;
 
@@ -124,10 +201,8 @@ namespace GADB
 
                 CrossParents = ga.Crossover.ParentsNumber;
                 CrossChildren = ga.Crossover.ChildrenNumber;
-
             }
         }
-
 
         partial class SolutionsRow
         {
@@ -149,7 +224,6 @@ namespace GADB
                 //  _genes = null;
                 _genes = genes;
             }
-
 
             public IList<int> GenesAsInts
             {
@@ -178,6 +252,20 @@ namespace GADB
                 }
             }
 
+            /*
+                        public IList<decimal> GenesAsDecimals
+                        {
+                            get
+                            {
+                                Func<Gene, decimal> selector = o =>
+                                {
+                                    return ((decimal)o.Value);
+                                };
+
+                                return _genes.Select(selector).ToList();
+                            }
+                        }
+            */
             private Gene[] _genes;
 
             public DataDataTable DataAxuliar
@@ -186,8 +274,6 @@ namespace GADB
                 {
                     return dataAxuliar;
                 }
-
-
             }
 
             public Gene[] Genes
@@ -198,6 +284,5 @@ namespace GADB
                 }
             }
         }
-
     }
 }

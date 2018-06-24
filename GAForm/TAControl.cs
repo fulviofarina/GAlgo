@@ -31,21 +31,18 @@ namespace GAForm
             this.toolStripComboBox5.ComboBox.ValueMember = this.gADataSet.Termination.TypeColumn.ColumnName;
         }
 
-        public int[] GetSelection ()
+        public int[] GetSelection()
         {
-
             int[] indexes = new int[5];
 
-            indexes[0] = this.toolStripComboBox3.SelectedIndex+1; //selection
-            indexes[1] = this.toolStripComboBox1.SelectedIndex+1; //crossover
-            indexes[2] = this.toolStripComboBox2.SelectedIndex+1; //mutation
-            indexes[3] = this.toolStripComboBox4.SelectedIndex+1; //reinsertion
-            indexes[4] = this.toolStripComboBox5.SelectedIndex+1; //temrinaion
+            indexes[0] = this.toolStripComboBox3.SelectedIndex + 1; //selection
+            indexes[1] = this.toolStripComboBox1.SelectedIndex + 1; //crossover
+            indexes[2] = this.toolStripComboBox2.SelectedIndex + 1; //mutation
+            indexes[3] = this.toolStripComboBox4.SelectedIndex + 1; //reinsertion
+            indexes[4] = this.toolStripComboBox5.SelectedIndex + 1; //temrinaion
 
             return indexes;
-
         }
-
 
         public void UpdateStrings(object sender, EventArgs e)
         {
@@ -91,6 +88,11 @@ namespace GAForm
             this.selectionTableAdapter1.Fill(this.gADataSet.Selection);
             this.terminationTableAdapter1.Fill(this.gADataSet.Termination);
             this.reinsertionTableAdapter1.Fill(this.gADataSet.Reinsertion);
+
+            this.toolStripComboBox1.SelectedIndex = this.toolStripComboBox1.Items.Count - 1;
+            this.toolStripComboBox2.SelectedIndex = this.toolStripComboBox2.Items.Count - 1;
+            this.toolStripComboBox3.SelectedIndex = this.toolStripComboBox3.Items.Count - 1;
+            this.toolStripComboBox4.SelectedIndex = this.toolStripComboBox4.Items.Count - 1;
         }
 
         public void UpdateGA(object sender, EventArgs e)

@@ -34,7 +34,7 @@ namespace GADB
                 //decode
                 FillStrings(ref currentSolution, ref currentString);
 
-              //  GNUPLOT(ref currentSolution);
+                //  GNUPLOT(ref currentSolution);
                 //assign string ID... //this should be better
             }
         }
@@ -56,7 +56,6 @@ namespace GADB
                 currentSolution.Initialize(bestChromosome.GetGenes());
                 currentSolution.ProblemID = PROBLEMID;
 
-             
                 //this is the most important function to override, does the fitness calc
                 FillBasic(ref currentSolution);
 
@@ -71,6 +70,8 @@ namespace GADB
                 funcion(currentSolution);
                 //the listOfSolutions contains the list of rows that need to be added
                 //these rows are flagged ShouldDelete = false
+
+                //REPONER ESTO
                 if (!currentSolution.ShouldDelete)
                 {
                     ds.Solutions.AddSolutionsRow(currentSolution);
@@ -117,9 +118,6 @@ namespace GADB
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-
-   
-   
 
         private static void GNUPLOT(ref GADataSet.SolutionsRow s)
         {

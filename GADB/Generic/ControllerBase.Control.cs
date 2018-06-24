@@ -20,7 +20,6 @@ namespace GADB
     /// </summary>
     public abstract partial class ControllerBase : IController
     {
-
         public bool StopResume(bool stop)
         {
             if (stop) GA.Stop();
@@ -38,12 +37,8 @@ namespace GADB
         {
             AFitness f = new AFitness();
 
-
             f.FitnessFuncToPass = c =>
             {
-
-
-
                 GADataSet.SolutionsDataTable sols = new GADataSet.SolutionsDataTable();
                 GADataSet.SolutionsRow currentSolution = sols.NewSolutionsRow();
                 // GADataSet.SolutionsDataTable sols = new GADataSet.SolutionsDataTable();
@@ -53,13 +48,12 @@ namespace GADB
                 currentSolution.Initialize(c.GetGenes());
                 currentSolution.ProblemID = PROBLEMID;
 
-              //  initializeRows(ref currentSolution, ref c);
+                //  initializeRows(ref currentSolution, ref c);
 
                 FillBasic(ref currentSolution);
 
                 double fit = currentSolution.Fitness; //STORE THE VALUE OF FITNESS
                 sols.Dispose();
-             
 
                 return fit;
             };
@@ -74,7 +68,6 @@ namespace GADB
         {
             //  Initialize(); //IMPORTANT
 
-        
             // crossover = new CycleCrossover();
             IChromosome adam = CreateChromosome();
 
@@ -84,12 +77,14 @@ namespace GADB
             IFitness fitness = CreateFitness();
             GeneticAlgorithm ga;
             ga = new GeneticAlgorithm(population, fitness, config.Selection, config.Crossover, config.Mutation);
-                      
+
             ga.Termination = config.Termination;
-            if (config.Reinsertion!=null) ga.Reinsertion = config.Reinsertion;
+            if (config.Reinsertion != null) ga.Reinsertion = config.Reinsertion;
             //   ga.Termination = new GenerationNumberTermination(probabilities.maxPop);
             ga.MutationProbability = probabilities.mutationProb;
             ga.CrossoverProbability = probabilities.crossProb;
+
+            //  ga.TaskExecutor = null;
 
             ga.TaskExecutor = new SmartThreadPoolTaskExecutor()
             {
@@ -97,11 +92,9 @@ namespace GADB
                 MaxThreads = 70
             };
 
-
             GARow.Initialize(ref ga); //initialize
             GARow.ConfigTypes(ref config); // types ids
             GARow.ConfigTypesNames(ref ga); // types names, change with ids only
-      
 
             GA = ga;
         }
@@ -158,6 +151,7 @@ namespace GADB
 
             if (problemData.Length == 0)
             {
+                //todo:
                 throw new Exception("No Problem Variables and Values given");
             }
 

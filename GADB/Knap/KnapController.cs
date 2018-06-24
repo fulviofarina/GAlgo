@@ -13,7 +13,10 @@ namespace GADB
                 string dummy = Aid.DecodeStrings(r.GenesAsInts, ProblemData, VariableNames[i]);
                 string field = VariableNames[i] + "String";
                 DataRow row = s as DataRow;
-                row.SetField(field, dummy); //first
+                if (row.Table.Columns.Contains(field))
+                {
+                    row.SetField(field, dummy); //first
+                }
             }
         }
 
@@ -40,13 +43,29 @@ namespace GADB
                     string maxVarStr = "Max" + VariableNames[i];
                     string minVarStr = "Min" + VariableNames[i];
                     //is the variable within the window given by the condition?
-                    double a = r.Field<double>(totalVarStr);
-                    double b = Conditions[j].Field<double>(maxVarStr);
-                    varOk[i] = (a <= b);
-                    a = r.Field<double>(totalVarStr);
-                    b = Conditions[j].Field<double>(minVarStr);
-                    varOk[i] = varOk[i] && (a >= b);
+                    bool nul1 = r.IsNull(totalVarStr);
+                    bool nul2 = Conditions[j].IsNull(maxVarStr);
 
+                    double a, b;
+
+                    if (!nul1  && !nul2)
+                    {
+                         a = r.Field<double>(totalVarStr);
+                         b = Conditions[j].Field<double>(maxVarStr);
+
+                        varOk[i] = (a <= b);
+                     
+                      
+                    }
+
+                 
+                    nul2 = Conditions[j].IsNull(minVarStr);
+                    if (!nul1 && !nul2)
+                    {
+                        a = r.Field<double>(totalVarStr);
+                        b = Conditions[j].Field<double>(minVarStr);
+                        varOk[i] = varOk[i] && (a >= b);
+                    }
                     ANDS_OK = ANDS_OK && varOk[i];
                 }
 
@@ -72,16 +91,28 @@ namespace GADB
                         {
                             //auxiliars
                             //  string str =  VariableNames[i]; //dataRow.A B or C
-                            string maxCondstr = "Max" + VariableNames[i]; //on condition row
-                            string fineCondstr = VariableNames[i] + "Fine";
+                         
 
-                            //difference value less MAX_VALUE
-                            double auxiliarDifference = r.Field<double>(VariableNames[i]) - Conditions[j].Field<double>(maxCondstr);
-                            //take TARIF
-                            double tariff = Conditions[j].Field<double>(fineCondstr);
+                            if (!r.IsNull(VariableNames[i]))
+                            {
+                                string maxCondstr = "Max" + VariableNames[i]; //on condition row
+                                string fineCondstr = VariableNames[i] + "Fine";
+                                //difference value less MAX_VALUE
+                                double valor = r.Field<double>(VariableNames[i]);
+                                if (!Conditions[j].IsNull(maxCondstr))
+                                {
+                                    double condition = Conditions[j].Field<double>(maxCondstr);
+                                    double auxiliarDifference = valor - condition;
+                                    //take TARIF
+                                    if (!Conditions[j].IsNull(fineCondstr))
+                                    {
+                                        double tariff = Conditions[j].Field<double>(fineCondstr);
+                                        //FINE i-esim = difference * tariff
+                                        fine += (auxiliarDifference) * tariff; //excess weight
+                                    }
+                                }
+                            }
 
-                            //FINE i-esim = difference * tariff
-                            fine += (auxiliarDifference) * tariff; //excess weight
                         }
                     }
                 }

@@ -17,8 +17,19 @@ namespace GAForm
         /// </summary>
         private static DataGridViewCellMouseEventArgs DGVARGUMENTDUMMY = new DataGridViewCellMouseEventArgs(0, 0, 0, 0, MOUSEVENT);
 
-        private IController IsampleControl = null;
+        public void FillExternalProblems(ref DataRow[] problems, string field, string fieldID, int minSize, int maxSize, int nrOfIters)
+        {
+            this.gADataSet.FillExternalProblems(ref problems, field, fieldID, minSize, maxSize, nrOfIters);
+        }
 
+        /// <summary>
+        /// Controller to Employ
+        /// </summary>
+        public IController IControl = null;
+
+        /// <summary>
+        /// A form for the problem Data and Conditions
+        /// </summary>
         private ProblemForm pform;
 
         public Form()
@@ -69,7 +80,6 @@ namespace GAForm
                 GADataSet.GARow currentGARow = null;
                 currentGARow = this.gADataSet.GA.NewGARow();
                 this.gADataSet.GA.AddGARow(currentGARow);
-              
 
                 currentGARow.ProblemID = currentProblem.ProblemID;
                 currentGARow.ChromosomeLength = MINSIZE;
@@ -82,54 +92,45 @@ namespace GAForm
                 this.SolBS.Sort = this.gADataSet.Solutions.FitnessColumn
                     .ColumnName + " desc";
 
-
-
                 int[] selection = taControl1.GetSelection();
                 Configuration Configuration = new Configuration(selection[0], selection[1], selection[2], selection[3], selection[4]);
                 ///CUT HERE
-          // IsampleControl= new KnapController();
+                // IsampleControl= new KnapController();
 
-                IsampleControl = new NAAControl();
+                IControl.SetControllerFor(ref currentProblem, MINSIZE);
+                IControl.Probabilities = prob;
+                IControl.Config = Configuration;
+                IControl.GARow = currentGARow;
 
-                IsampleControl.SetControllerFor(ref currentProblem, MINSIZE);
-                IsampleControl.Probabilities = prob;
-                IsampleControl.Config = Configuration;
-                IsampleControl.GARow = currentGARow;
-
-                IsampleControl.RunConfiguration();
-              
-
+                IControl.RunConfiguration();
 
                 //refresh progress bar
-                IsampleControl.CallBack = delegate
+                IControl.CallBack = delegate
                 {
                     Application.DoEvents();
                     this.toolStripProgressBar1.PerformStep();
                 };
 
                 //UPDATE DATABASES
-                IsampleControl.SaveCallBack = delegate
+                IControl.SaveCallBack = delegate
                 {
                     taControl1.UpdateGA(sender, e);
                     taControl1.UpdateSolutions(sender, e);
                 };
                 //UPDATE DATABASES
-                IsampleControl.FinalCallBack = delegate
+                IControl.FinalCallBack = delegate
                 {
                     taControl1.UpdateStrings(sender, e);
                     dgvDoubleMouseclick(this.SolutionsDataGridView, new DataGridViewCellMouseEventArgs(0, 0, 0, 0, MOUSEVENT));
                 };
 
-
-             //   IsampleControl.ConfigGA();
+                //   IsampleControl.ConfigGA();
 
                 //no BKG worker for now...
-                IsampleControl.PostScript(false);
+                IControl.PostScript(false);
 
                 //ABORT IF STOPPED
                 if (!stopbtn.Enabled) break;
-
-           
 
                 this.gobtn.Enabled = true;
                 this.stopbtn.Enabled = false;
@@ -145,6 +146,11 @@ namespace GAForm
                 }
             }
             while (MINSIZE <= MAXSIZE);
+        }
+
+        public void FillExternalData(int problemID, int[] subProblemIDs)
+        {
+            this.gADataSet.FillExternalData(problemID, subProblemIDs);
         }
 
         private Probabilities setProbabilities()
@@ -206,7 +212,6 @@ namespace GAForm
                 this.resumebtn.Enabled = true;
                 this.stopbtn.Enabled = false;
                 stop = true;
-               
             }
             else
             {
@@ -216,10 +221,8 @@ namespace GAForm
                 stop = false;
             }
 
-            IsampleControl.StopResume(stop);
+            IControl.StopResume(stop);
         }
-
-      
 
         private void dgvDoubleMouseclick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -285,21 +288,19 @@ namespace GAForm
             Aid.DoStatistics<GADataSet.ProblemsRow>(p);
             Application.DoEvents();
             taControl1.UpdateAll(sender, e);
-
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            if (this.toolStripButton1.Text.CompareTo("Faster")==0)
+            if (this.toolStripButton1.Text.CompareTo("Faster") == 0)
             {
                 this.SolutionsDataGridView.Visible = false;
                 this.toolStripButton1.Text = ("Slower");
-            } 
+            }
             else
             {
                 this.toolStripButton1.Text = ("Faster");
                 this.SolutionsDataGridView.Visible = true;
-
             }
         }
     }

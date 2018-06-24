@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using GADB;
 
 namespace GAForm
 {
@@ -13,7 +14,9 @@ namespace GAForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form());
+            Form from = new Form();
+            from.IControl = new KnapController();
+            Application.Run(from);
         }
     }
 }
